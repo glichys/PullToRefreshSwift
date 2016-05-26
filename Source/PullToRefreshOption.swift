@@ -24,4 +24,8 @@ public struct PullToRefreshOption {
     public var imageName: String = "pulltorefresharrow.png"
     public var height: CGFloat = 80
     public var animationDuration: Double = 0.5
+    
+    init () {
+        
+    }
 }
