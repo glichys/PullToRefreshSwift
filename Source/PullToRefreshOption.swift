@@ -25,7 +25,7 @@ public struct PullToRefreshOption {
     public var height: CGFloat = 80
     public var animationDuration: Double = 0.5
     
-    init () {
+    public init () {
         
     }
 }
