@@ -90,7 +90,7 @@ public class PullToRefreshView: UIView {
         self.arrow = UIImageView(frame: CGRectMake(0, 0, 30, 30))
         self.arrow.autoresizingMask = [.FlexibleLeftMargin, .FlexibleRightMargin]
         
-        self.arrow.image = UIImage(named: PullToRefreshConst.imageName, inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)
+        self.arrow.image = UIImage(named: options.imageName, inBundle: NSBundle(forClass: self.dynamicType), compatibleWithTraitCollection: nil)
         
         
         self.indicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
@@ -227,7 +227,7 @@ public class PullToRefreshView: UIView {
             insets.bottom += self.frame.size.height
         }
         scrollView.bounces = false
-        UIView.animateWithDuration(PullToRefreshConst.animationDuration,
+        UIView.animateWithDuration(options.animationDuration,
                                    delay: 0,
                                    options:[],
                                    animations: {
@@ -251,7 +251,7 @@ public class PullToRefreshView: UIView {
             return
         }
         scrollView.bounces = self.scrollViewBounces
-        let duration = PullToRefreshConst.animationDuration
+        let duration = options.animationDuration
         UIView.animateWithDuration(duration,
                                    animations: {
                                     scrollView.contentInset = self.scrollViewInsets
