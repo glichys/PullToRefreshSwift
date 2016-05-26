@@ -50,7 +50,7 @@ public class PullToRefreshView: UIView {
             case .Stop:
                 stopAnimating()
             case .Finish:
-                var duration = PullToRefreshConst.animationDuration
+                var duration = options.animationDuration
                 var time = dispatch_time(DISPATCH_TIME_NOW, Int64(duration * Double(NSEC_PER_SEC)))
                 dispatch_after(time, dispatch_get_main_queue()) {
                     self.stopAnimating()
